@@ -11,11 +11,17 @@
 			array[i].classList.remove(remove);
 		}
 	}
+
+	var addClass = function(selector, append) {
+		var attribute = selector.getAttribute("href");
+		document.querySelector(attribute).classList.add(append);
+	};
 	
 	var showModal = function(event){
 		event.preventDefault();
 
 		removeClass('.modal','show')
+		addClass(event.target, "show");
 
 		document.querySelector('#modal-overlay').classList.add('show');
 	};
