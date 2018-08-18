@@ -5,8 +5,18 @@
 	Teraz wystarczy napisać funkcję otwierającą modal:
 	*/
 	
+	var removeClass = function(selector, remove) {
+		var array = document.querySelectorAll(selector);
+		for (var i = 0; i < array.length; i++) {
+			array[i].classList.remove(remove);
+		}
+	}
+	
 	var showModal = function(event){
 		event.preventDefault();
+
+		removeClass('.modal','show')
+
 		document.querySelector('#modal-overlay').classList.add('show');
 	};
 	
