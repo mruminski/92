@@ -22,8 +22,9 @@
 	};
 	
 	var modalLinks = document.querySelectorAll('.show-modal');
+	var modalLinksLen = modalLinks.length;
 	
-	for(var i = 0; i < modalLinks.length; i++){
+	for(var i = 0; i < modalLinksLen; i++){
 		modalLinks[i].addEventListener('click', showModal);
 	}
 	
