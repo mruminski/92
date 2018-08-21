@@ -2,7 +2,7 @@
 (function(){ 
 	var removeClass = function(selector, remove) {
 		var array = document.querySelectorAll(selector);
-		array.forEach(function(item) {
+		Array.prototype.forEach.call(array, function(item) {
 			item.classList.remove(remove);
 		})
 	}
